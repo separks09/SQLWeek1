@@ -381,7 +381,7 @@ display(HTML(df.to_html(index=False)))
   <thead>
     <tr style="text-align: right;">
       <th>last_name</th>
-      <th>COUNT(last_name)</th>
+      <th>actors_with_name</th>
     </tr>
   </thead>
   <tbody>
@@ -403,26 +403,6 @@ display(HTML(df.to_html(index=False)))
     </tr>
     <tr>
       <td>BAILEY</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>BALE</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>BALL</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>BARRYMORE</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>BASINGER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>BENING</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -822,9 +802,7 @@ display(HTML(df.to_html(index=False)))
       <th>staff_id</th>
       <th>first_name</th>
       <th>last_name</th>
-      <th>CONCAT($"</th>
-      <th>FORMAT(SUM(payment.amount)</th>
-      <th>2))"</th>
+      <th>Amount Sold/Staff</th>
     </tr>
   </thead>
   <tbody>
@@ -833,16 +811,12 @@ display(HTML(df.to_html(index=False)))
       <td>Mike</td>
       <td>Hillyer</td>
       <td>$33,489.47</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <td>2</td>
       <td>Jon</td>
       <td>Stephens</td>
       <td>$33,927.04</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -913,8 +887,8 @@ display(HTML(df.to_html(index=False)))
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>title</th>
-      <th>COUNT(inventory.inventory_id)</th>
+      <th>Title</th>
+      <th>Number in Inventory</th>
     </tr>
   </thead>
   <tbody>

@@ -75,10 +75,11 @@ staff.address_id = address.address_id;
 
 --6b
 USE sakila;
-SELECT staff.first_name, staff.last_name, address.address
+SELECT payment.staff_id, staff.first_name, staff.last_name, CONCAT("$", FORMAT(SUM(payment.amount),2)) AS 'Amount Sold/Staff'
 FROM staff
-INNER JOIN address ON
-staff.address_id = address.address_id;
+INNER JOIN payment ON
+staff.staff_id = payment.staff_id
+GROUP BY staff_id;
 
 --6c
 USE sakila;
@@ -89,7 +90,7 @@ GROUP BY film.film_id;
 
 --6d
 USE sakila;
-SELECT film.title, COUNT(inventory.inventory_id)
+SELECT film.title AS 'Title', COUNT(inventory.inventory_id) AS 'Number in Inventory'
 FROM inventory
 INNER JOIN film ON film.film_id = inventory.film_id
 GROUP BY film.film_id 
