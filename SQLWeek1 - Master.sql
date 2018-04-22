@@ -12,16 +12,16 @@ SELECT actor_id,first_name,last_name FROM actor WHERE first_name LIKE "Joe";
 
 --2b
 USE sakila;
-SELECT * FROM actor WHERE first_name LIKE "%GEN%"
+SELECT * FROM actor WHERE first_name LIKE "%GEN%";
 
 --2c
 USE sakila;
-SELECT last_name,first_name FROM actor WHERE first_name LIKE "%LI%"
+SELECT last_name,first_name FROM actor WHERE first_name LIKE "%LI%";
 
 --2d
 USE sakila;
 SELECT country_id,country FROM country
-	WHERE country = "Afghanistan" OR country = "Bangladesh" OR country = "China"
+	WHERE country = "Afghanistan" OR country = "Bangladesh" OR country = "China";
     
 --3a-3b
 USE sakila;
@@ -35,7 +35,7 @@ SELECT*FROM actor;
 USE sakila;
 ALTER TABLE actor
 	DROP COLUMN middle_name;
-SELECT*FROM actor
+SELECT*FROM actor;
 
 --4a
 USE sakila;
@@ -51,7 +51,7 @@ SELECT last_name,COUNT(last_name) AS cnt FROM actor
 --4c_1
 USE sakila;
 SELECT actor_id,first_name,last_name FROM actor	
-	WHERE first_name = "GROUCHO"
+	WHERE first_name = "GROUCHO";
 
 --4c_2
 USE sakila;
@@ -59,7 +59,7 @@ UPDATE actor
 	SET first_name = "HARPO" 
     WHERE first_name = "GROUCHO" and last_name = "WILLIAMS";
 SELECT actor_id,first_name,last_name FROM actor	
-	WHERE first_name = "HARPO"
+	WHERE first_name = "HARPO";
 
 --5a
 USE sakila;
@@ -166,7 +166,7 @@ CREATE VIEW Top5sales AS
 SELECT category AS 'Genre', CONCAT('$',total_sales) AS 'Total Sales' FROM sales_by_film_category
 ORDER BY total_sales DESC
 LIMIT 5;
-SELECT*FROM Top5sales
+SELECT*FROM Top5sales;
 
 --8c
 USE sakila;
